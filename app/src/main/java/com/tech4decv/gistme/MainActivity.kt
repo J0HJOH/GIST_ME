@@ -8,9 +8,16 @@ import android.view.MenuItem
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit tabLayout : TabLayout
+    private lateinit viewPager : viewPager2
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        tablayout = findViewById(R.id.tab)
+        viewpager = findViewById(R.id.viewpager)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
