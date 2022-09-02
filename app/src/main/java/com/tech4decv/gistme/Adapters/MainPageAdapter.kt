@@ -1,9 +1,13 @@
-package com.tech4decv.gistme
+package com.tech4decv.gistme.Adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.tech4decv.gistme.fragment.CallsFragment
+import com.tech4decv.gistme.fragment.CameraFragment
+import com.tech4decv.gistme.fragment.ChatFragment
+import com.tech4decv.gistme.fragment.StatusFragment
 
 class MainPageAdapter(fm:FragmentManager,lf:Lifecycle): FragmentStateAdapter(fm, lf) {
     override fun getItemCount(): Int {

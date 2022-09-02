@@ -6,10 +6,12 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.tech4decv.gistme.Adapters.MainPageAdapter
+import com.tech4decv.gistme.extraActivities.NewBroadcastActivity
+import com.tech4decv.gistme.extraActivities.NewGroupActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,9 +34,11 @@ class MainActivity : AppCompatActivity() {
                 2 ->  tab.text=  "Status"
                 3 ->  tab.icon= getDrawable(R.drawable.ic_baseline_call_24)
 
-                else ->  tab.text= "Chat"
+                else ->  tab.icon=getDrawable(R.drawable.ic_baseline_chat_24)
             }
         }.attach()
+
+        viewPager.currentItem = 1
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -78,7 +82,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun goToNewBroadcast(){
-        var i = Intent(this, NewBroadcast ::class.java )
+        var i = Intent(this, NewBroadcastActivity ::class.java )
         startActivity(i)
     }
 }

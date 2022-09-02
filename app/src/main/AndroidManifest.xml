@@ -15,12 +15,12 @@
         android:theme="@style/Theme.GISTME"
         tools:targetApi="31">
         <activity
-            android:name=".NewBroadcast"
+            android:name=".extraActivities.NewBroadcastActivity"
             android:exported="false"
             android:label="New Broadcast"
             android:parentActivityName=".MainActivity"/>
         <activity
-            android:name=".NewGroupActivity"
+            android:name=".extraActivities.NewGroupActivity"
             android:exported="false"
             android:label="New Group"
             android:parentActivityName=".MainActivity" />

@@ -1,4 +1,4 @@
-package com.tech4decv.gistme
+package com.tech4decv.gistme.Model
 
 import android.security.identity.AccessControlProfile
 

@@ -1,4 +1,4 @@
-package com.tech4decv.gistme
+package com.tech4decv.gistme.Adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.tech4decv.gistme.R
+import com.tech4decv.gistme.sampleData
 
 class ListOfFriendsAdapter(val context:Context) : RecyclerView.Adapter<ListOfFriendsAdapter.LFViewholder>() {
     private val sampleData = sampleData()
