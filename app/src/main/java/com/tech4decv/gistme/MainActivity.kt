@@ -14,7 +14,7 @@ import com.tech4decv.gistme.extraActivities.NewBroadcastActivity
 import com.tech4decv.gistme.extraActivities.NewGroupActivity
 
 class MainActivity : AppCompatActivity() {
-
+    private lateinit var toolbar: androidx.appcompat.widget.Toolbar
     private lateinit var tabLayout : TabLayout
     private lateinit var viewPager : ViewPager2
 
@@ -22,19 +22,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        toolbar = findViewById(R.id.MainToolbar)
+        setSupportActionBar(toolbar)
+
+        initTabLayout()
+    }
+
+    private fun initTabLayout() {
         tabLayout = findViewById(R.id.tab)
 
         viewPager = findViewById(R.id.viewPager)
-        viewPager.adapter = MainPageAdapter( supportFragmentManager ,lifecycle)
+        viewPager.adapter = MainPageAdapter(supportFragmentManager, lifecycle)
 
-        TabLayoutMediator(tabLayout, viewPager){tab, position->
-           when(position){
-                0 -> tab.icon= getDrawable(R.drawable.ic_baseline_photo_camera_24)
-                1 ->  tab.icon= getDrawable(R.drawable.ic_baseline_chat_24)
-                2 ->  tab.text=  "Status"
-                3 ->  tab.icon= getDrawable(R.drawable.ic_baseline_call_24)
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            when (position) {
+                0 -> tab.icon = getDrawable(R.drawable.ic_baseline_photo_camera_24)
+                1 -> tab.icon = getDrawable(R.drawable.ic_baseline_chat_24)
+                2 -> tab.text = "Status"
+                3 -> tab.icon = getDrawable(R.drawable.ic_baseline_call_24)
 
-                else ->  tab.icon=getDrawable(R.drawable.ic_baseline_chat_24)
+                else -> tab.icon = getDrawable(R.drawable.ic_baseline_chat_24)
             }
         }.attach()
 
@@ -68,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                     return true
                 }
                 R.id.starred_messages->{
-                    Toast.makeText(this, "starred messages click", Toast.LENGTH_LONG).show()
+                    goToStarredMessage()
                     return true
                 }else-> {
                     return false
@@ -84,5 +91,9 @@ class MainActivity : AppCompatActivity() {
     private fun goToNewBroadcast(){
         var i = Intent(this, NewBroadcastActivity ::class.java )
         startActivity(i)
+    }
+    private fun goToStarredMessage(){
+        var a = Intent(this, starredMessageActivity::class.java)
+        startActivity(a)
     }
 }

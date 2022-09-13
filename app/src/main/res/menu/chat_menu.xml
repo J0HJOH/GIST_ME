@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/videoCall"
+        android:icon="@drawable/ic_baseline_videocam_24"
+        android:title="Video Calls"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/voiceCall"
+        android:icon="@drawable/ic_baseline_call_24"
+        android:title="Voice Calls"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/viewContact"
+        android:title="View Contact" />
+    <item
+        android:id="@+id/files"
+        android:title="Media, links and docs" />
+    <item
+        android:id="@+id/app_bar_search"
+        android:title="Search"
+        app:actionViewClass="android.widget.SearchView" />
+
+    <item
+        android:id="@+id/muteNotification"
+        android:title="Mute notification" />
+    <item
+        android:id="@+id/disappearingMsg"
+        android:title="Disappearing messages" />
+    <item
+        android:id="@+id/wallpaper"
+        android:title="Wallpaper" />
+
+
+
+</menu>

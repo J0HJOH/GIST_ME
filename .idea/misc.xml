@@ -4,15 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/drawable/ic_baseline_connect_without_contact_24.xml" value="0.138" />
+        <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.1" />
         <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.138" />
+        <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/layout/activity_chat.xml" value="0.22" />
         <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/layout/activity_new_broadcast.xml" value="0.18840579710144928" />
         <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/layout/activity_new_group.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/layout/activity_starred_message.xml" value="0.1" />
+        <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/layout/chats_layout.xml" value="0.2" />
         <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/layout/fragment_calls.xml" value="0.153125" />
         <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/layout/fragment_camera.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/layout/fragment_chat.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/layout/fragment_status.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/layout/list_of_friends_layout.xml" value="0.14207650273224043" />
+        <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/menu/chat_menu.xml" value="0.2" />
         <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/menu/main_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/menu/search.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/JOAN/AndroidStudioProjects/GISTME/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.138" />

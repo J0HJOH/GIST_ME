@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.tech4decv.gistme">
-    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -15,10 +16,19 @@
         android:theme="@style/Theme.GISTME"
         tools:targetApi="31">
         <activity
+            android:name=".ChatActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".starredMessageActivity"
+            android:exported="false"
+            android:label="Starred Messages"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".extraActivities.NewBroadcastActivity"
             android:exported="false"
             android:label="New Broadcast"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".extraActivities.NewGroupActivity"
             android:exported="false"

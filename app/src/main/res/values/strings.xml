@@ -2,4 +2,5 @@
     <string name="app_name">GIST ME</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="voice_calls">Voice Calls</string>
 </resources>
