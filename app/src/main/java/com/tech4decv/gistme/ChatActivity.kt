@@ -4,13 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.tech4decv.gistme.Adapters.ChatAdapter
+import com.tech4decv.gistme.adapters.ChatAdapter
 import com.tech4decv.gistme.Model.Chats
 import com.tech4decv.gistme.Model.Message
 import java.text.SimpleDateFormat
@@ -32,7 +30,7 @@ class ChatActivity : AppCompatActivity() {
 //        gets the chat details of a specified user(username), it could be a null value because of (?)
         val chat: Chats? = sampleChats.getChatsOf(username)
 //        gets the messages of the chat specified, and a value of type List of message must be passed
-//        because of the ascertion(!!)
+//        because of the asertion (!!)
         val listOfMessages:MutableList<Message> = chat!!.message.toMutableList()
 //  Refactored these two, to be a function that has the specified dependencies written here()
         initChatToolbar(username)
@@ -42,10 +40,10 @@ class ChatActivity : AppCompatActivity() {
         sendButton = findViewById(R.id.sendButton)
         sendButton.setOnClickListener{
 //get user input
-            val userInput : String = messageTyped.text.toString() ?:""
+            val userInput : String = messageTyped.text.toString()?:""
             //update listOf message above
             val sdf = SimpleDateFormat("h:mm a")
-            var time: String= sdf.format(Date())
+            val time: String= sdf.format(Date())
 //            create a message type
             val message = Message (
                 Sender = "peter simon",

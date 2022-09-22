@@ -1,26 +1,29 @@
 package com.tech4decv.gistme
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.Toast
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import com.tech4decv.gistme.Adapters.MainPageAdapter
-import com.tech4decv.gistme.extraActivities.NewBroadcastActivity
-import com.tech4decv.gistme.extraActivities.NewGroupActivity
-
+import com.tech4decv.gistme.adapters.MainPageAdapter
+import com.tech4decv.gistme.extraActivities.CameraActivity
 class MainActivity : AppCompatActivity() {
     private lateinit var toolbar: androidx.appcompat.widget.Toolbar
     private lateinit var tabLayout : TabLayout
     private lateinit var viewPager : ViewPager2
+    private lateinit var context : Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
+//        ensures the splash screen shows as you designed in the theme, once the application is created
+        val splashScreen = installSplashScreen()
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        context = this
 
         toolbar = findViewById(R.id.MainToolbar)
         setSupportActionBar(toolbar)
@@ -40,60 +43,24 @@ class MainActivity : AppCompatActivity() {
                 1 -> tab.icon = getDrawable(R.drawable.ic_baseline_chat_24)
                 2 -> tab.text = "Status"
                 3 -> tab.icon = getDrawable(R.drawable.ic_baseline_call_24)
-
-                else -> tab.icon = getDrawable(R.drawable.ic_baseline_chat_24)
             }
         }.attach()
 
         viewPager.currentItem = 1
-    }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.main_menu,menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-            when(item.itemId){
-                R.id.app_bar_search->{
-                    Toast.makeText(this,"search click", Toast.LENGTH_LONG).show()
-                    return true
+        viewPager.registerOnPageChangeCallback(
+            object: ViewPager2.OnPageChangeCallback(){
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+                    if(position==0){
+                        val intent= Intent(context, CameraActivity::class.java)
+                        startActivity(intent)
+                        viewPager.currentItem=1
+                    }
                 }
-                R.id.linked_device->{
-                    Toast.makeText(this, "linked device click", Toast.LENGTH_LONG).show()
-                    return true
-                }
-                R.id.new_broadcast ->{
-                    goToNewBroadcast()
-                    return true
-                }
-                R.id.settings ->{
-                    Toast.makeText(this, "settings click", Toast.LENGTH_LONG).show()
-                    return true
-                }
-                R.id.new_group->{
-                    goToNewGroupActivity()
-                    return true
-                }
-                R.id.starred_messages->{
-                    goToStarredMessage()
-                    return true
-                }else-> {
-                    return false
-                }
-
             }
+        )
     }
-    private fun goToNewGroupActivity(){
-        var i = Intent(this, NewGroupActivity ::class.java)
-        startActivity(i)
 
-    }
-    private fun goToNewBroadcast(){
-        var i = Intent(this, NewBroadcastActivity ::class.java )
-        startActivity(i)
-    }
-    private fun goToStarredMessage(){
-        var a = Intent(this, starredMessageActivity::class.java)
-        startActivity(a)
-    }
+
 }

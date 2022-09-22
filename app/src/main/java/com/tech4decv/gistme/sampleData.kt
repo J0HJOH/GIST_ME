@@ -1,8 +1,27 @@
 package com.tech4decv.gistme
 
-import com.tech4decv.gistme.Model.Chats
-import com.tech4decv.gistme.Model.Message
-import com.tech4decv.gistme.Model.User
+import com.tech4decv.gistme.Model.*
+
+
+class SampleCalls{
+    val LIST_OF_CALLS : MutableList<Call> = mutableListOf(
+            Call("joan okereke", "wednesday"),
+            Call("rick john", "september 12, 4:00am"),
+            Call("joan okereke", "august 6, 12:00pm"),
+            Call("joan okereke", "august 9, 12:00pm"),
+            Call("joan okereke", "august 6, 7:00pm")
+    )
+}
+
+class SampleStatus{
+    val LIST_OF_STATUS : List<Status> = listOf(
+        Status("joan okereke","23 min ago"),
+        Status("rick john","10 min ago"),
+        Status("john river","1 hour ago"),
+        Status("jan brown","10 hours ago"),
+        Status("joel pen","12 hours ago"),
+    )
+}
 
 class sampleData {
     val LIST_OF_FRIENDS : List<User> = listOf(

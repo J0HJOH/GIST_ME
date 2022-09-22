@@ -1,4 +1,4 @@
-package com.tech4decv.gistme.Adapters
+package com.tech4decv.gistme.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,10 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.tech4decv.gistme.Model.Chats
 import com.tech4decv.gistme.Model.Message
 import com.tech4decv.gistme.R
-import com.tech4decv.gistme.SampleChats
 
 class ChatAdapter  (val context : Context, val listOfMessages:List<Message>): RecyclerView.Adapter<ChatAdapter.ChatViewHolder>() {
 

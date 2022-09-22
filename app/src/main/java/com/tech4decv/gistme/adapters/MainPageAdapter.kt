@@ -1,4 +1,4 @@
-package com.tech4decv.gistme.Adapters
+package com.tech4decv.gistme.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

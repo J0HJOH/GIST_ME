@@ -7,7 +7,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.tech4decv.gistme.Adapters.ListOfFriendsAdapter
+import com.tech4decv.gistme.adapters.ListOfFriendsAdapter
 import com.tech4decv.gistme.R
 
 class NewBroadcastActivity : AppCompatActivity() {
